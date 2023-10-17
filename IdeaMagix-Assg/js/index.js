@@ -37,14 +37,13 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-const mN = document.getElementsByClassName(".h-full-container")[0];
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleBtn = document.getElementById("#h-icon");
-    toggleBtn?.addEventListener('click', () => {
-        mN.classList.toggle("active");
-    });
+const testTB = document.querySelector(".test");
+const toggleBtn = document.querySelector(".h-full-container");
+testTB?.addEventListener('click', () => {
+    toggleBtn.classList.toggle("open")
 
 });
+
 
 
 

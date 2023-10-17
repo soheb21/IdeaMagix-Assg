@@ -584,26 +584,15 @@ a {
   }
 }
 
-@media (min-width: 640px) {
-  .paddings {
-    padding: 4rem;
-  }
-}
-
-@media (min-width: 1280px), (min-width: 768px) {
-  .paddings {
-    padding: 2rem;
-  }
-}
 @media (max-width: 960px), (max-width: 767px) {
   .f-head {
     position: static;
   }
+  .m-img{
+    width: 20rem;
+  }
 }
 @media (max-width: 765px) {
-  .h-wrapper > input {
-    border: 2px solid red;
-  }
   .h-wrapper > img,
   .h-icon {
     display: block;
@@ -620,7 +609,14 @@ a {
   .h-wrapper>input{
     display: none;
   }
-
+  .h-wrapper>p{
+    text-align: end;
+    overflow: hidden;
+  }
+  .h-wrapper>p>i{
+    font-size: 2rem;
+    margin: 1rem;
+  }
   .h-icon {
     position: absolute;
     top: 15px;
@@ -636,17 +632,17 @@ a {
 
   .h-full-container {
     position: relative;
+    overflow: hidden;
     height: 100vh;
-    left: -100%;
-
+    display: none;
   }
-  #click:checked ~ .h-full-container {
-    left: 0%;
+.open.h-full-container {
+    display: block;
   }
  
   .hh-container {
     position: absolute;
-    top: 65px;
+    top: 0;
     right: 0;
     height: 50%;
     display: block;
@@ -664,9 +660,10 @@ a {
     flex-direction: column;
   }
   .h-container {
-    position: absolute;
+
     background: var(--blue);
-    top: 400px;
+    position: sticky;
+    top: 300px;
     right: 0;
     flex-direction: column;
     height: 60%;
@@ -685,6 +682,17 @@ a {
   }
   .h-detail .secondaryText {
     color: white;
+  }
+  .m-container{
+    flex-direction: column;
+    overflow: scroll;
+  }
+  .m-right{
+    right: 10px;
+    bottom: 10px;
+  }
+  .m-img{
+    width: 10rem;
   }
   .primaryText {
     font-size: 1.5rem;
